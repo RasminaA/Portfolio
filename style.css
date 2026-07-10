@@ -1,59 +1,350 @@
-body {
-    font-family: Arial;
-    margin: 0;
-    background: linear-gradient(to right, #eef2f3, #8ec5fc);
+/* ===========================
+   GENERAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-/* Header */
-header {
-    text-align: center;
-    padding: 50px;
-    color: white;
-    background: linear-gradient(to right, #007BFF, #00c6ff);
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#333;
+    line-height:1.6;
 }
 
-/* Sections */
-section {
-    margin: 30px;
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    width:100%;
+    background:#ffffff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
-/* Skills */
-.skills span {
-    background: #007BFF;
-    color: white;
-    padding: 10px 15px;
-    margin: 5px;
-    display: inline-block;
-    border-radius: 20px;
-    transition: transform 0.3s;
+nav{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 20px;
 }
 
-.skills span:hover {
-    transform: scale(1.1);
+.logo{
+    color:#2563eb;
+    font-size:28px;
+    font-weight:700;
 }
 
-/* Project Cards */
-.project-card {
-    background: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+nav ul{
+    display:flex;
+    list-style:none;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+nav ul li{
+    margin-left:25px;
 }
 
-/* Links */
-a {
-    text-decoration: none;
-    color: #007BFF;
-    font-weight: bold;
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
 }
 
-a:hover {
-    text-decoration: underline;
+nav ul li a:hover{
+    color:#2563eb;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(135deg,#2563eb,#4f9cf9);
+    color:white;
+    padding:40px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero span{
+    color:#ffd166;
+}
+
+.hero h3{
+    font-size:28px;
+    margin-bottom:15px;
+    font-weight:500;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttons{
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 28px;
+    margin:10px;
+    border-radius:8px;
+    text-decoration:none;
+    background:white;
+    color:#2563eb;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#ffd166;
+    color:#222;
+    transform:translateY(-3px);
+}
+
+.btn2{
+    background:transparent;
+    border:2px solid white;
+    color:white;
+}
+
+.btn2:hover{
+    background:white;
+    color:#2563eb;
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+
+section{
+    max-width:1100px;
+    margin:60px auto;
+    padding:20px;
+}
+
+section h2{
+    text-align:center;
+    color:#2563eb;
+    font-size:36px;
+    margin-bottom:30px;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   SKILLS
+=========================== */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skills span{
+    background:#2563eb;
+    color:white;
+    padding:12px 22px;
+    border-radius:30px;
+    font-weight:500;
+    transition:.3s;
+}
+
+.skills span:hover{
+    background:#1d4ed8;
+    transform:translateY(-4px);
+}
+
+/* ===========================
+   PROJECTS
+=========================== */
+
+.project-card{
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.project-card h3{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.project-card p{
+    margin-bottom:18px;
+}
+
+.project-card a{
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:600;
+}
+
+.project-card a:hover{
+    text-decoration:underline;
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+#contact p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+#contact a{
+    color:#2563eb;
+    text-decoration:none;
+}
+
+#contact a:hover{
+    text-decoration:underline;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+    margin-top:15px;
+}
+
+nav ul li{
+    margin:10px 0;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero h3{
+    font-size:22px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.btn{
+    display:block;
+    width:220px;
+    margin:15px auto;
+}
+
+section h2{
+    font-size:30px;
+}
+
+}
+/* ===========================
+   Animation
+=========================== */
+
+.hidden{
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+
+}
+
+.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
+
+/* ===========================
+   Scroll Button
+=========================== */
+
+#topBtn{
+
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+#topBtn:hover{
+
+    background:#1d4ed8;
+    transform:scale(1.1);
+
 }
